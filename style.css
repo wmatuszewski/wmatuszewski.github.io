@@ -1,0 +1,350 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  background-color: white;
+}
+#header {
+  width: 100%;
+  position: fixed;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #434A54;
+  z-index: 99;
+}
+#header a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+#header a:hover {
+  color: #a9b0ba;
+  cursor: pointer;
+}
+#header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#header li {
+  display: inline-block;
+  padding: 30px;
+  position: relative;
+}
+.icon-folder-open {
+  position: relative;
+  left: 4px;
+  top: 1px;
+}
+#mobile-header {
+  width: 100%;
+  background-color: #434A54;
+  display: none;
+  height: 82px;
+  top: 0;
+  left: 0;
+  float: left;
+}
+#mobile-header p {
+  color: white;
+  margin: 0;
+  padding: 30px;
+  cursor: pointer;
+}
+#mobile-header .icon-align-justify {
+  margin-left: 30px;
+}
+#landing-photo-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 82px);
+  float: left;
+  margin-top: 82px;
+  position: relative;
+}
+#landing-photo {
+  position: absolute;
+  width: 103%;
+  margin-left: -10px;
+  margin-top: -5px;
+  height: calc(100vh - 70px);
+  background-image: url("images/landing.jpg");
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+#landing-strings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#landing-strings p {
+  margin: 0px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.first,
+.last {
+  font-size: 45px;
+  padding: 30px;
+}
+.middle {
+  font-size: 24px;
+  position: relative;
+}
+.middle::before,
+.middle::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 12px;
+  left: -72px;
+  width: 60px;
+}
+.middle::after {
+  left: 70px;
+}
+#content-wrap {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 200px;
+  z-index: 1;
+}
+#portfolio-wrap {
+  width: 100%;
+  float: left;
+  z-index: 98;
+  background-color: white;
+}
+#portfolio {
+  padding: 0px 50px 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+#portfolio p {
+  font-size: 30px;
+  margin: 0;
+  padding: 50px 20px 50px 20px;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+#portfolio .portfolio-header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+.page {
+  width: calc(50% - 20px);
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 300ms ease-in-out;
+  transition-property: transform, opacity;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  float: left;
+}
+.page:hover img {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+.page img {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+  display: block;
+  z-index: 98;
+}
+.layer span {
+  font-size: 1.5em;
+  align-self: flex-end;
+  padding: 10px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.page-desc {
+  position: absolute;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+.page-desc span {
+  font-size: 1.5em;
+  align-self: flex-end;
+  padding: 10px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.icon-right-big {
+  font-size: 40px;
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  padding: 10px;
+  align-self: flex-end;
+  color: #F6BB42;
+}
+#skills-wrap {
+  width: 100%;
+  float: left;
+  background-color: #E6E9ED;
+}
+#skills-image {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  background-image: url("images/skills.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  float: left;
+}
+#skills-string-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#skills-string-wrap p {
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#skills {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.skill {
+  width: 30%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  padding-bottom: 100px;
+}
+.last-skill {
+  margin: 0;
+}
+.skill-photo {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.skill-header {
+  padding: 20px;
+  margin: 0;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.skill-desc {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #0d0d0d;
+  color: white;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+.is-showing {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.menu-mobile-showing {
+  max-height: 400px !important;
+}
+@media screen and (max-width: 900px) {
+  .skill {
+    width: 50%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .page {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .skill {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 630px) {
+  #mobile-header {
+    display: block;
+  }
+  #portfolio {
+    padding: 10px;
+  }
+  .page {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #header ul {
+    float: left;
+    max-height: 0px;
+  }
+  #header li {
+    float: left;
+    width: 100%;
+  }
+}
